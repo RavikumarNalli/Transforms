@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforms</title>
+    <style>
+        body{
+            background-color: aqua;
+            text-align: center;
+            display: block;
+        
+        }
+        .header{
+            background-color: violet;
+            text-align: center;
+            color: blue;
+        }
+        button{
+            background-color: blueviolet;
+            color: brown;
+            cursor: pointer;
+            border-radius: 20px;
+            padding: 10px;
+            transition-property: background-color;
+            transition-delay: 0.15s;
+        }
+        button:hover{
+            background-color: pink;
+            
+        }
+#Rotate:hover~.main img{
+    transform: rotate(360deg);
+}
+#Skew:hover~.main img{
+    transform: skewX(30deg);
+}
+#Scale:hover~.main img{
+    transform: scale(0.5, 1)
+}
+
+#Translate:hover~.main img{
+    transform: translate(90px, 80px);
+}
+img{
+    height: 200px;
+    border: 2px solid;
+    transition: all 2s;
+    margin-top: 20%;
+}
+ </style>
+</head>
+<body>
+    <div class="container">
+    <div class="header"><h1>Transforms Example</h1></div>
+    <div class="content">
+        <button id="Rotate">Rotate</button>
+        <button id="Skew">Skew</button>
+        <button id="Scale">Scale</button>
+        <button id="Translate">Translate</button>
+        <div class="main">
+        <img src="./OIP.jpg">
+    </div>
+    </div>
+    </div>
+</body>
+</html>
